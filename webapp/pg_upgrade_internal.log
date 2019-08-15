@@ -1,0 +1,8 @@
+Running in verbose mode
+
+-----------------------------------------------------------------
+  pg_upgrade run on Tue Apr 16 14:19:36 2019
+-----------------------------------------------------------------
+
+check for "/var/lib/pgsql/data" failed: Permission denied
+

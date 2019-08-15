@@ -1,0 +1,51 @@
+  <project type="bio">
+    <property name="target.model" value="genomic"/>
+    <property name="source.location" location="../bio/sources/"/>
+    <property name="common.os.prefix" value="common"/>
+    <property name="intermine.properties.file" value="bovineminev1.5.properties"/>
+    <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
+    <sources>
+        <source name="bovine-ARS-UCD1.2-chromosome-fasta" type="fasta">
+            <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+            <property name="fasta.dataSourceName" value="Bos taurus Genome ARS-UCD1.2"/>
+            <property name="fasta.assemblyVersion" value="ARS-UCD1.2"/>
+            <property name="fasta.dataSetTitle" value="Bos taurus ARS-UCD1.2 chromosome assembly"/>
+            <property name="fasta.taxonId" value="9913"/>
+            <property name="fasta.sequenceType" value="dna"/>
+            <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.BovineArsFastaLoaderTask"/>
+            <property name="fasta.includes" value="*.fa"/>
+            <property name="src.data.dir" location="/db/bovinemine_release_SEP2018/datasets/genome/bos_taurus/ARS-UCD1.2"/>
+        </source>
+
+
+                <source name="test-gff" type="ensembl-gff">
+            <property name="gff3.taxonId" value="9913"/>
+            <property name="gff3.seqAssemblyVersion" value="ARS-UCD1.2"/>
+            <property name="gff3.dataSourceName" value="Gene annotations from Ensembl (Release 95)"/>
+            <property name="gff3.dataSetTitle" value="Gene annotations from Ensembl for Bos taurus ARS-UCD1.2"/>
+            <property name="gff3.seqClsName" value="Chromosome"/>
+            <property name="src.data.dir" location="/db/bovinemine_release_SEP2018/datasets/test_gff"/>
+        </source>
+
+            <source name="test-vcf" type="dbsnp-variation">
+                <property name="assemblyVersion" value="ARS-UCD1.2"/>
+                <property name="src.data.dir" location="/db/bovinemine_release_SEP2018/datasets/test_vcf/"/>
+                <property name="src.data.dir.includes" value="*.vcf"/>
+            </source>
+
+                </sources>
+
+    <post-processing>
+        <post-process name="create-references"/>
+        <post-process name="transfer-sequences"/>
+        <post-process name="create-overlap-view"/>
+        <post-process name="create-location-overlap-index"/>
+        <post-process name="do-sources"/>
+        <post-process name="create-attribute-indexes"/>
+        <post-process name="create-search-index"/>
+        <post-process name="summarise-objectstore"/>
+        <post-process name="create-autocomplete-index"/>
+    </post-processing>
+
+</project>
+
