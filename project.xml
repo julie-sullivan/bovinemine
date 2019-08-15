@@ -27,7 +27,9 @@
             <property name="src.data.file" location="/db/bovinemine_release_feb2019/datasets/ontologies/evidence-ontology/eco_OCT2017.obo"/>
         </source>
         <source name="psi-mi-ontology" type="psi-mi-ontology">
-            <property name="src.data.file" location="/db/bovinemine_release_feb2019/datasets/ontologies/psi-mi-ontology/psi-mi_20181011.obo"/>
+          
+	  <property name="src.data.file" location="/micklem/data/psi/ontology/current/psi-mi.obo"/>
+	  
         </source>
         <source name="sequence-ontology" type="so">
             <property name="src.data.file" location="/db/bovinemine_release_feb2019/datasets/ontologies/sequence-ontology/so_20181011.obo"/>
