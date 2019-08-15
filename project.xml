@@ -1,9 +1,6 @@
   <project type="bio">
     <property name="target.model" value="genomic"/>
-    <property name="source.location" location="../bio/sources/"/>
     <property name="common.os.prefix" value="common"/>
-    <property name="intermine.properties.file" value="bovineminev1.5.properties"/>
-    <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
     <sources>
         <source name="uberon" type="uber-anatomy-ontology">
             <property name="src.data.file" location="/db/bovinemine_release_feb2019/datasets/ontologies/uber-anatomy-ontology/uberon-basic_OCT2017.obo"/>

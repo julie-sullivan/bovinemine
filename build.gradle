@@ -30,6 +30,7 @@ subprojects {
   repositories {
     mavenLocal()
     jcenter()
+    mavenCentral()
     maven { url 'https://clojars.org/repo' }
     maven {
         url "https://oss.jfrog.org/artifactory/oss-snapshot-local"
